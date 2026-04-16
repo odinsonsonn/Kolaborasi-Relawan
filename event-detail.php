@@ -239,8 +239,7 @@ $conn->close();
         <p>&copy; 2026 RelawanKita. Semua hak cipta dilindungi.</p>
     </footer>
 
-    <script src="script.js">
-        
-    </script>
+    <script src="script.js"></script>
+    <script src="daftar_script.js"></script>
 </body>
 </html>
