@@ -161,7 +161,7 @@ $conn->close();
 
                     <!-- CTA Button -->
                     <div class="flex flex-col sm:flex-row gap-4 pt-8 border-t border-gray-200">
-                        <button onclick="alert('Fitur pendaftaran akan segera tersedia!')" class="flex-1 bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition-all font-bold text-lg shadow-lg shadow-blue-200">
+                        <button onclick="openModal()" class="flex-1 bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition-all font-bold text-lg shadow-lg shadow-blue-200">
                             <i class="fas fa-check-circle mr-2"></i> Daftar Sekarang
                         </button>
                         <button onclick="window.location.href='events.php'" class="flex-1 bg-gray-100 text-gray-700 py-4 rounded-xl hover:bg-gray-200 transition-all font-bold text-lg border border-gray-200">
@@ -171,12 +171,76 @@ $conn->close();
                 </div>
             </div>
         </div>
+        <div id="registrationModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+    
+    <div class="relative bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden transform transition-all animate-slide-up">
+        <div class="bg-blue-600 p-6 text-center text-white">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-3">
+                <i class="fas fa-hands-helping text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold">Gabung Relawan</h3>
+            <p class="text-blue-100 text-sm">Sedikit bantuanmu, berarti besar bagi mereka.</p>
+        </div>
+
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-white/80 hover:text-white">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+
+        <div class="p-8">
+            <div id="formStatus" class="hidden mb-4 p-4 rounded-xl text-sm font-medium"></div>
+
+            <form id="volunteerForm" onsubmit="submitForm(event)" class="space-y-4">
+                <input type="hidden" name="event_id" value="<?php echo $_GET['id'] ?? ''; ?>">
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap</label>
+                    <input type="text" name="name" required placeholder="Masukkan nama lengkap" 
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+                    <input type="email" name="email" required placeholder="nama@email.com" 
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nomor WhatsApp</label>
+                    <input type="tel" name="phone" required placeholder="0812xxxx" 
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
+                        <span>Kirim Pendaftaran</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+            
+            <p class="text-center text-xs text-gray-400 mt-6">
+                Penyelenggara akan menghubungi Anda melalui WhatsApp atau Email.
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    @keyframes slide-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-up { animation: slide-up 0.3s ease-out; }
+</style>
     </section>
 
     <footer class="py-8 text-center text-gray-400 text-sm bg-white border-t mt-16">
         <p>&copy; 2026 RelawanKita. Semua hak cipta dilindungi.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        
+    </script>
 </body>
 </html>
