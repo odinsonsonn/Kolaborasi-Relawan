@@ -42,18 +42,18 @@ $conn->close();
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center cursor-pointer" onclick="window.location.href='index.html'">
-                    <i class="fas fa-hands-helping text-blue-600 text-2xl mr-2"></i>
+                    <i class="fas fa-hands-helping text-yellow-600 text-2xl mr-2"></i>
                     <span class="text-xl font-bold text-gray-900">RelawanKita</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition font-medium">Beranda</a>
-                    <a href="events.php" class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1">Kegiatan</a>
-                    <a href="ajukan.html" class="text-gray-600 hover:text-blue-600 transition font-medium">Ajukan Event</a>
-                    <a href="about.html" class="text-gray-600 hover:text-blue-600 transition font-medium">Tentang Kami</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition font-medium">Kontak</a>
+                    <a href="index.html" class="text-gray-600 hover:text-yellow-600 transition font-medium">Beranda</a>
+                    <a href="events.php" class="text-yellow-600 font-bold border-b-2 border-yellow-600 pb-1">Kegiatan</a>
+                    <a href="ajukan.html" class="text-gray-600 hover:text-yellow-600 transition font-medium">Ajukan Event</a>
+                    <a href="about.html" class="text-gray-600 hover:text-yellow-600 transition font-medium">Tentang Kami</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-yellow-600 transition font-medium">Kontak</a>
                 </div>
                 <div class="hidden md:block">
-                    <button onclick="window.location.href='ajukan.html'" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition font-medium shadow-md">Mulai Sekarang</button>
+                    <button onclick="window.location.href='ajukan.html'" class="bg-yellow-600 text-white px-6 py-2 rounded-full hover:bg-yellow-700 transition font-medium shadow-md">Mulai Sekarang</button>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@ $conn->close();
 
     <section class="bg-gray-100 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <a href="events.php" class="text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2 mb-6">
+            <a href="events.php" class="text-yellow-600 hover:text-yellow-700 font-semibold flex items-center gap-2 mb-6">
                 <i class="fas fa-arrow-left"></i> Kembali ke Kegiatan
             </a>
         </div>
@@ -75,7 +75,7 @@ $conn->close();
                     <?php if ($event['image_url']): ?>
                         <img src="<?php echo htmlspecialchars($event['image_url']); ?>" alt="<?php echo htmlspecialchars($event['title']); ?>" class="w-full h-full object-cover">
                     <?php else: ?>
-                        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-emerald-100">
+                        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-yellow-100 to-yellow-50">
                             <i class="fas fa-image text-gray-400 text-8xl"></i>
                         </div>
                     <?php endif; ?>
@@ -92,9 +92,9 @@ $conn->close();
 
                     <!-- Info Cards -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                        <div class="bg-blue-50 p-4 rounded-xl border border-blue-200">
+                        <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-200">
                             <div class="flex items-center gap-3">
-                                <i class="fas fa-calendar-alt text-blue-600 text-2xl"></i>
+                                <i class="fas fa-calendar-alt text-yellow-600 text-2xl"></i>
                                 <div>
                                     <p class="text-xs text-gray-500 uppercase font-semibold">Tanggal</p>
                                     <p class="text-lg font-bold text-gray-900">
@@ -104,9 +104,9 @@ $conn->close();
                             </div>
                         </div>
 
-                        <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200">
+                        <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-200">
                             <div class="flex items-center gap-3">
-                                <i class="fas fa-clock text-emerald-600 text-2xl"></i>
+                                <i class="fas fa-clock text-yellow-600 text-2xl"></i>
                                 <div>
                                     <p class="text-xs text-gray-500 uppercase font-semibold">Waktu</p>
                                     <p class="text-lg font-bold text-gray-900">
@@ -116,9 +116,9 @@ $conn->close();
                             </div>
                         </div>
 
-                        <div class="bg-red-50 p-4 rounded-xl border border-red-200">
+                        <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-200">
                             <div class="flex items-center gap-3">
-                                <i class="fas fa-map-marker-alt text-red-600 text-2xl"></i>
+                                <i class="fas fa-map-marker-alt text-yellow-600 text-2xl"></i>
                                 <div>
                                     <p class="text-xs text-gray-500 uppercase font-semibold">Lokasi</p>
                                     <p class="text-lg font-bold text-gray-900">
@@ -140,7 +140,7 @@ $conn->close();
                     <!-- Organizer -->
                     <div class="mb-8 bg-gray-50 p-6 rounded-xl border border-gray-200">
                         <h3 class="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                            <i class="fas fa-building text-blue-600"></i> Penyelenggara
+                            <i class="fas fa-building text-yellow-600"></i> Penyelenggara
                         </h3>
                         <p class="text-gray-600 text-lg">
                             <?php echo htmlspecialchars($event['organizer'] ?? 'Belum ditentukan'); ?>
@@ -151,7 +151,7 @@ $conn->close();
                     <?php if (!empty($event['requirements'])): ?>
                         <div class="mb-8">
                             <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                <i class="fas fa-list-check text-emerald-600"></i> Persyaratan
+                                <i class="fas fa-list-check text-yellow-600"></i> Persyaratan
                             </h3>
                             <p class="text-gray-600 leading-relaxed text-lg">
                                 <?php echo nl2br(htmlspecialchars($event['requirements'])); ?>
@@ -161,7 +161,7 @@ $conn->close();
 
                     <!-- PENDAFTARAN -->
                     <div class="flex flex-col sm:flex-row gap-4 pt-8 border-t border-gray-200">
-                        <button onclick="openModal()" class="flex-1 bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition-all font-bold text-lg shadow-lg shadow-blue-200">
+                        <button onclick="openModal()" class="flex-1 bg-yellow-600 text-white py-4 rounded-xl hover:bg-yellow-700 transition-all font-bold text-lg shadow-lg shadow-yellow-200">
                             <i class="fas fa-check-circle mr-2"></i> Daftar Sekarang
                         </button>
                         <button onclick="window.location.href='events.php'" class="flex-1 bg-gray-100 text-gray-700 py-4 rounded-xl hover:bg-gray-200 transition-all font-bold text-lg border border-gray-200">
@@ -175,12 +175,12 @@ $conn->close();
     <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
     
     <div class="relative bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden transform transition-all animate-slide-up">
-        <div class="bg-blue-600 p-6 text-center text-white">
+        <div class="bg-yellow-600 p-6 text-center text-white">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-3">
                 <i class="fas fa-hands-helping text-3xl"></i>
             </div>
             <h3 class="text-2xl font-bold">Gabung Relawan</h3>
-            <p class="text-blue-100 text-sm">Sedikit bantuanmu, berarti besar bagi mereka.</p>
+            <p class="text-yellow-100 text-sm">Sedikit bantuanmu, berarti besar bagi mereka.</p>
         </div>
 
         <button onclick="closeModal()" class="absolute top-4 right-4 text-white/80 hover:text-white">
@@ -196,23 +196,23 @@ $conn->close();
                 <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap</label>
                     <input type="text" name="name" required placeholder="Masukkan nama lengkap" 
-                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 outline-none transition">
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
                     <input type="email" name="email" required placeholder="nama@email.com" 
-                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 outline-none transition">
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-1">Nomor WhatsApp</label>
                     <input type="tel" name="phone" required placeholder="0812xxxx" 
-                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+                        class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-yellow-500 outline-none transition">
                 </div>
 
                 <div class="pt-2">
-                    <button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
+                    <button type="submit" id="submitBtn" class="w-full bg-yellow-600 text-white py-4 rounded-xl font-bold hover:bg-yellow-700 transition-all shadow-lg flex items-center justify-center gap-2">
                         <span>Kirim Pendaftaran</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>

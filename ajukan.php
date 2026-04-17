@@ -24,13 +24,13 @@ session_start();
     <nav class="bg-white shadow-sm h-20 flex items-center sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
             <div class="flex items-center cursor-pointer group" onclick="window.location.href='index.html'">
-                <div class="bg-blue-600 p-2 rounded-lg mr-2 group-hover:bg-blue-700 transition shadow-md">
+                <div class="bg-yellow-600 p-2 rounded-lg mr-2 group-hover:bg-yellow-700 transition shadow-md">
                     <i class="fas fa-hands-helping text-white text-xl"></i>
                 </div>
                 <span class="text-xl font-bold text-gray-900 tracking-tight">RelawanKita</span>
             </div>
             
-            <a href="index.html" class="flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-200">
+            <a href="index.html" class="flex items-center gap-2 bg-yellow-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-yellow-700 transition-all duration-300 shadow-lg hover:shadow-yellow-200">
                 <i class="fas fa-arrow-left text-sm"></i>
                 <span>Kembali ke Beranda</span>
             </a>
@@ -39,20 +39,20 @@ session_start();
 
     <section class="py-12 px-4">
         <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-            <div class="bg-gradient-to-r from-blue-600 to-blue-800 py-10 px-8 text-white">
+            <div class="bg-gradient-to-r from-yellow-600 to-yellow-700 py-10 px-8 text-white">
                 <h1 class="text-3xl font-bold">Ajukan Kegiatan Relawan</h1>
-                <p class="mt-2 text-blue-100 opacity-90">Bantu kami menghubungkan organisasi Anda dengan relawan hebat di seluruh Indonesia.</p>
+                <p class="mt-2 text-yellow-100 opacity-90">Bantu kami menghubungkan organisasi Anda dengan relawan hebat di seluruh Indonesia.</p>
             </div>
             
             <form class="p-8 space-y-6" id="eventForm">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Nama Organisasi <span class="text-red-500">*</span></label>
-                        <input type="text" name="organizer" required placeholder="Contoh: Yayasan Peduli Hijau" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="text" name="organizer" required placeholder="Contoh: Yayasan Peduli Hijau" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Kategori Kegiatan <span class="text-red-500">*</span></label>
-                        <select name="category" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <select name="category" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition">
                             <option value="">-- Pilih Kategori --</option>
                             <option value="Pendidikan">Pendidikan</option>
                             <option value="Lingkungan">Lingkungan</option>
@@ -66,37 +66,37 @@ session_start();
 
                 <div>
                     <label class="block text-sm font-bold text-gray-700 mb-2">Judul Kegiatan Volunteer <span class="text-red-500">*</span></label>
-                    <input type="text" name="title" required placeholder="Contoh: Aksi Bersih Pantai & Edukasi Mangrove" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                    <input type="text" name="title" required placeholder="Contoh: Aksi Bersih Pantai & Edukasi Mangrove" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition">
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Tanggal <span class="text-red-500">*</span></label>
-                        <input type="date" name="event_date" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="date" name="event_date" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Waktu <span class="text-red-500">*</span></label>
-                        <input type="time" name="event_time" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="time" name="event_time" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-2">Lokasi <span class="text-red-500">*</span></label>
-                        <input type="text" name="location" required placeholder="Contoh: Pantai Ancol, Jakarta" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        <input type="text" name="location" required placeholder="Contoh: Pantai Ancol, Jakarta" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-sm font-bold text-gray-700 mb-2">Deskripsi Detail Kegiatan <span class="text-red-500">*</span></label>
-                    <textarea name="description" rows="6" required placeholder="Jelaskan secara detail tentang kegiatan volunteer..." class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                    <textarea name="description" rows="6" required placeholder="Jelaskan secara detail tentang kegiatan volunteer..." class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition"></textarea>
                 </div>
 
                 <div>
                     <label class="block text-sm font-bold text-gray-700 mb-2">Persyaratan & Kualifikasi</label>
-                    <textarea name="requirements" rows="4" placeholder="Sebutkan persyaratan yang dibutuhkan relawan..." class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                    <textarea name="requirements" rows="4" placeholder="Sebutkan persyaratan yang dibutuhkan relawan..." class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition"></textarea>
                 </div>
 
                 <div>
                     <label class="block text-sm font-bold text-gray-700 mb-2">URL Gambar Poster (Optional)</label>
-                    <input type="url" name="image_url" placeholder="https://example.com/gambar.jpg" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                    <input type="url" name="image_url" placeholder="https://example.com/gambar.jpg" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition">
                     <p class="text-xs text-gray-500 mt-2">Gunakan link gambar dari internet atau upload ke hosting terlebih dahulu</p>
                 </div>
 
@@ -104,7 +104,7 @@ session_start();
                 <div id="messageBox"></div>
 
                 <div class="pt-4">
-                    <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-200 transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed" id="submitBtn">
+                    <button type="submit" class="w-full bg-yellow-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-yellow-700 transition-all duration-300 shadow-lg hover:shadow-yellow-200 transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed" id="submitBtn">
                         <i class="fas fa-paper-plane mr-2"></i> Kirim Pengajuan Sekarang
                     </button>
                     <p class="text-center text-xs text-gray-400 mt-4 italic">
@@ -154,7 +154,7 @@ session_start();
                 }
 
                 if (result.success) {
-                    msgBox.innerHTML = `<div class="bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-xl">
+                    msgBox.innerHTML = `<div class="bg-yellow-50 border border-yellow-200 text-yellow-700 px-4 py-3 rounded-xl">
                         <i class="fas fa-check-circle mr-2"></i> ${result.message}
                     </div>`;
                     e.target.reset();
