@@ -17,6 +17,18 @@ if (!$result || $result->num_rows === 0) {
 }
 
 $event = $result->fetch_assoc();
+
+// Query jumlah pendaftar
+$count_result = $conn->query("SELECT COUNT(*) as total FROM registrations WHERE event_id = $id");
+$count = $count_result->fetch_assoc()['total'];
+
+// Query daftar pendaftar
+$registrants_result = $conn->query("SELECT name FROM registrations WHERE event_id = $id ORDER BY created_at DESC");
+$registrants = [];
+while ($row = $registrants_result->fetch_assoc()) {
+    $registrants[] = $row['name'];
+}
+
 $conn->close();
 ?>
 
@@ -159,7 +171,31 @@ $conn->close();
                         </div>
                     <?php endif; ?>
 
-                    <!-- PENDAFTARAN -->
+                    <!-- Daftar Pendaftar -->
+                    <div class="mb-8 bg-green-50 p-6 rounded-xl border border-green-200">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="fas fa-users text-green-600"></i> Pendaftar Relawan
+                        </h3>
+                        <div class="mb-4">
+                            <p class="text-lg font-semibold text-gray-800">
+                                Total Pendaftar: <span class="text-green-600"><?php echo $count; ?> orang</span>
+                            </p>
+                        </div>
+                        <?php if (!empty($registrants)): ?>
+                            <div>
+                                <p class="text-sm text-gray-600 mb-2">Daftar nama pendaftar:</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                    <?php foreach ($registrants as $name): ?>
+                                        <div class="bg-white p-3 rounded-lg border border-gray-200 text-gray-800">
+                                            <i class="fas fa-user text-green-500 mr-2"></i><?php echo htmlspecialchars($name); ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        <?php else: ?>
+                            <p class="text-gray-500 italic">Belum ada pendaftar.</p>
+                        <?php endif; ?>
+                    </div>
                     <div class="flex flex-col sm:flex-row gap-4 pt-8 border-t border-gray-200">
                         <button onclick="openModal()" class="flex-1 bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition-all font-bold text-lg shadow-lg shadow-blue-200">
                             <i class="fas fa-check-circle mr-2"></i> Daftar Sekarang
