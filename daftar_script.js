@@ -24,7 +24,7 @@ async function submitForm(e) {
     btn.innerHTML = '<i class="fas fa-spinner animate-spin"></i> Memproses...';
 
     try {
-        const response = await fetch('process-register.php', {
+        const response = await fetch('api-daftar.php', {
             method: 'POST',
             body: formData
         });

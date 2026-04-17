@@ -159,7 +159,7 @@ $conn->close();
                         </div>
                     <?php endif; ?>
 
-                    <!-- CTA Button -->
+                    <!-- PENDAFTARAN -->
                     <div class="flex flex-col sm:flex-row gap-4 pt-8 border-t border-gray-200">
                         <button onclick="openModal()" class="flex-1 bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition-all font-bold text-lg shadow-lg shadow-blue-200">
                             <i class="fas fa-check-circle mr-2"></i> Daftar Sekarang
@@ -218,6 +218,7 @@ $conn->close();
                     </button>
                 </div>
             </form>
+            
             
             <p class="text-center text-xs text-gray-400 mt-6">
                 Penyelenggara akan menghubungi Anda melalui WhatsApp atau Email.
