@@ -1,3 +1,5 @@
+
+console.log('script.js loaded', typeof openModal);
 // ==========================================
 // 1. FADE-IN SAAT HALAMAN DIBUKA
 // ==========================================
@@ -92,3 +94,6 @@ forms.forEach(id => {
         });
     }
 });
+
+
+
